@@ -1,0 +1,255 @@
+/* By Kevin Van Cott*/
+
+section {
+    border: none;
+    min-width: 0;
+    width: auto;
+    padding: 0;
+    margin: 0 auto;
+}
+
+footer {
+    color: white;
+}
+
+button {
+    z-index: 3;
+    font-size: .9em;
+}
+
+.monitor {
+    border: 5px solid #aaa;
+    background-image: radial-gradient(#444, #111);
+    margin: 10px auto;
+    z-index: 1;
+    display: table;
+    padding: 0px;
+}
+
+.monitor p {
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Arial Black';
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.monitor:active {
+    -webkit-box-shadow: 8px 8px 20px #777;
+    box-shadow: 8px 8px 20px #777;
+    cursor: move;
+    z-index: 2;
+}
+
+.monitor:hover {
+    -webkit-box-shadow: 8px 8px 20px #777;
+    box-shadow: 8px 8px 20px #777;
+    cursor: move;
+}
+
+.monitorBox {
+    display: none;
+    text-align: left;
+}
+
+.monitorOptions {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-bottom: dashed 1px #888;
+    width: 100%;
+    background-color: #fff;
+}
+
+#monitorOptionsArea {
+    min-height: 500px;
+}
+
+.stats {
+    margin-top: 15px;
+    padding-bottom: 6px;
+    border-bottom: dashed 1px #888;
+    border-top: dashed 1px #888;
+    width: 100%;
+    background-color: #fff;
+}
+
+.stats th {
+    text-align: right;
+}
+
+.stats td {
+    line-height: 1em;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    word-wrap: normal;
+}
+
+.stats th {
+    padding-bottom: 10px;
+}
+
+#buttons {
+    margin: auto;
+    width: auto;
+    min-width: 720px;
+    max-width: 720px;
+    height: 85px;
+    min-height: 85px;
+    max-height: 400px;
+    resize: vertical;
+    overflow: auto;
+}
+
+#buttons:active {
+    border-bottom: dashed darkred 2px;
+}
+
+#zoomIn:hover {
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+}
+
+#zoomOut:hover {
+    cursor: -webkit-zoom-out;
+    cursor: zoom-out;
+}
+
+#areaTip {
+    text-align: right;
+    font-size: .6em;
+    margin: 1px 5px;
+    line-height: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    body,
+    main {
+        max-width: 868px;
+        width: 99%;
+    }
+    #buttons {
+        max-width: 750px;
+        min-width: 500px;
+        width: 100%;
+        font-size: 1em;
+
+    }
+    button {
+        font-size: .9em;
+        padding: 2px;
+        margin: 0px;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+    h4 {
+        font-size: 1em;
+    }
+    #save {
+        width: 90%;
+    }
+    #analysis {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body,
+    main {
+        width: 100%;
+        max-width: 480px;
+        font-size: 1.1em;
+    }
+    #buttons {
+        width: 90%;
+        max-width: 480px;
+        min-width: 360px;
+        min-height: 365px;
+        height: auto;
+        max-height: 900px;
+        margin: auto;
+    }
+    button {
+        display: block;
+        padding: 0px;
+        margin: 5px auto;
+        min-width: 60%;
+        text-align: center;
+
+    }
+    select {
+        margin: auto;
+        text-align: center;
+    }
+    .monitorBox {
+
+        margin: 0px;
+        padding: 0px;
+    }
+    #save {
+        width: 99%;
+    }
+    #analysis {
+        max-width: 480px;
+        min-width: 360px;
+        width: 99%;
+    }
+}
+
+@media print {
+    .stats {
+        margin-bottom: 0px;
+        line-height: 1.2;
+    }
+    #totals p {
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+    h1,
+    h2 {
+        font-size: 1.3em;
+        margin-top: 0px;
+        padding: 0px;
+        line-height: 0.8;
+    }
+    h3,
+    footer,
+    .monitorOptions,
+    .extraSpecs,
+    .search,
+    input,
+    select,
+    button,
+    .searchEngine,
+    #save,
+    #areaTip {
+        display: none;
+        border: none;
+        /*Gets rid of buttons and options for printing*/
+    }
+
+    section {
+        border: none;
+    }
+
+    div {
+        border: none;
+    }
+
+    #analysis {
+        border: none;
+    }
+}
+
+@page {
+    size: A4 landscape;
+    /*forces printing in landscape, at least works for chrome*/
+}
